@@ -2,7 +2,7 @@ scalaJSSettings
 
 name := "scala-js-simple"
 
-scalaVersion := "2.11.1"
+scalaVersion := "2.11.2"
 
 libraryDependencies += "org.scala-lang.modules.scalajs" %%% "scalajs-dom" % "0.6"
 
