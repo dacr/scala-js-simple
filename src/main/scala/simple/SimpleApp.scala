@@ -33,13 +33,14 @@ object SimpleApp extends JSApp {
   }
 
   var inc = 1
-  var cx=100
+  //var cx=100
   def animate(grc:org.scalajs.jquery.JQuery) {
-    println(grc.attr("cx"))
+    //println(grc.attr("cx"))
     //val cx = grc.attr("cx").toInt + inc
+    var cx=grc.attr("cx").toInt
     cx = cx + inc
-    if (cx < 60) inc = 1
-    if (cx > 400) inc = -1
+    if (cx < 60) inc = 2
+    if (cx > 400) inc = -2
     grc.attr("cx", cx)
   }
 
@@ -47,7 +48,7 @@ object SimpleApp extends JSApp {
     jQuery("#click-me-button").click(addClickedMessage _)
     jQuery("body").append("<p>Hello World</p>")
 
-    document.defaultView.setInterval(() => animate(jQuery("GR-C")), 500)
+    dom.setInterval(() => animate(jQuery("#GR-C")), 25)
 
     jQuery("#GR-C").hover(in _, out _)
   }
