@@ -5,13 +5,9 @@
     <title>Scala JS simple</title>
   </head>
   <body>
-    <!-- Include Scala.js compiled code -->
-    <script type="text/javascript" src="./target/scala-2.11/scala-js-simple-jsdeps.js"></script>
-    <script type="text/javascript" src="./target/scala-2.11/scala-js-simple-fastopt.js"></script>
 
-    <script type="text/javascript">
-      simple.SimpleApp().main();
-    </script>
+	<div id="playground">
+	</div>
 
     <h1>Welcome</h1>
 
@@ -22,6 +18,11 @@
     <button id="click-me-button" type="button">
       Click me!
     </button>
+
+    <!-- Include Scala.js compiled code -->
+    <script type="text/javascript" src="./target/scala-2.11/scala-js-simple-jsdeps.js"></script>
+    <script type="text/javascript" src="./target/scala-2.11/scala-js-simple-fastopt.js"></script>
+    <script type="text/javascript">simple.SimpleApp().main();</script>
 
   </body>
 </html>
