@@ -2,13 +2,16 @@ enablePlugins(ScalaJSPlugin)
 
 name := "scala-js-simple"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.12.5"
 
 libraryDependencies ++= Seq(
-  "be.doeraene" %%% "scalajs-jquery" % "0.8.0",
-  "org.singlespaced" %%% "scalajs-d3" % "0.1.2"
+  "org.querki" %%% "jquery-facade" % "1.2",
+  "org.singlespaced" %%% "scalajs-d3" % "0.3.4",
+  "org.scala-js" %%% "scalajs-dom" % "0.9.5"
 )
 
 skip in packageJSDependencies := false
 
 
+jsDependencies +=
+  "org.webjars" % "jquery" % "2.2.1" / "jquery.js" minified "jquery.min.js"

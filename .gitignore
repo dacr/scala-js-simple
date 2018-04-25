@@ -15,3 +15,8 @@ nohup.out
 /bin/
 
 .cache-main
+.DS_store
+
+.idea
+*.iml
+
